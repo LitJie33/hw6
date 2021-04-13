@@ -1,5 +1,5 @@
 ---
-author: "陳立傑 B09106032 圖資系"
+author: "未命名 B01201001 一般系"
 title: "HW 6: 資料視覺化"
 date: |
   | 2021-04-08
@@ -47,13 +47,7 @@ died_summary
 
 ```{r}
 # Write your code here
-
-library(ggplot2)
-ggplot(died_summary) +
-  geom_bar(aes( x = Pclass , y = percent_survived), stat = "identity") +
-  facet_wrap(~Sex)
 ```
-
 
 <div class="alert alert-success hint">
 1. 如果不知道如何下手，請先閱讀 [R for Data Science 第三章](https://r4ds.had.co.nz/data-visualisation.html)
@@ -102,11 +96,6 @@ ggplot(died_summary) +
 ```{r}
 # Write your code here
 # 請務必印出 data frame
-
-library(readr)
-books <- read.csv("C:/Users/LIT JIE/OneDrive/Desktop/hw6/mydata.csv")
-books
-
 ```
 
 ### 資料視覺化 (30 分) {-}
@@ -114,26 +103,12 @@ books
 ```{r}
 # Write your code here
 # 請務必印出圖片
-library(ggplot2)
-ggplot(data = books, aes(x = Reviews, y = Year, colour = User.Rating))+
-  geom_point()+ 
-  geom_smooth()+ 
-  facet_wrap(~Genre)
-          
-  
-             
 ```
 
 ### Tweak the plot (10 分) {-}
 
 ```{r}
 # Write your code here
-library(ggplot2)
-ggplot(data = books, aes(x = Reviews, y = Year, colour = User.Rating))+
-  geom_point()+ 
-  geom_smooth()+ 
-  facet_wrap(~Genre)+
-  theme_linedraw()
 ```
 
 
@@ -142,7 +117,7 @@ ggplot(data = books, aes(x = Reviews, y = Year, colour = User.Rating))+
 
 請填寫[此份課程調查問卷][survey]，並將下方 `我，未命名，已完成問卷填答` 內的 `未命名` 更改為自己的姓名：
 
-> 我，陳立傑，已完成問卷填答
+> 我，未命名，已完成問卷填答
 
 [survey]: https://forms.gle/KKdkSSU4HSARaQ7H7
 
@@ -163,14 +138,14 @@ ggplot(data = books, aes(x = Reviews, y = Year, colour = User.Rating))+
 
 ```{r}
 # Modify the code below
-suv <- if_else(mpg$class == "suv","TRUE","FALSE")
-
-library(ggplot2)
 ggplot(data = mpg, mapping = aes(displ, hwy)) +
-  geom_point(aes(colour = suv)) +
+  geom_point() +
   geom_smooth() +
   labs(x = "Engine displacement (litres)", y = "Highway miles (per gallon)")
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> parent of 1c4e9a4 (completed)
 ```
